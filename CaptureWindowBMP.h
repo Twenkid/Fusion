@@ -3,8 +3,8 @@
 // http://twenkid.com
 // http://research.twenkid.com
 // Licensed to Incept Development
-// Non Disclosure Agreement
-// The source is not to be shared with third parties or resold
+// MIT License from May 2018
+
 
 #include "stdafx.h"
 #include <windows.h>
