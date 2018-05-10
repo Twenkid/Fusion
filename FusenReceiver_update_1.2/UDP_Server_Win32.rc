@@ -1,0 +1,300 @@
+//Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1251)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+
+IDI_UDP_SERVER_WIN32       ICON     "UDP_Server_Win32.ico"
+IDI_SMALL               ICON         "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_UDP_SERVER_WIN32 MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+		MENUITEM "Select Idle &Video",        IDM_VIDEO
+		MENUITEM "&Restart Idle Video",       IDM_RESTART_VIDEO
+        MENUITEM "E&xit",                IDM_EXIT
+    END    
+	POPUP "&Tools"
+	BEGIN
+	    MENUITEM "Tile Windows", IDM_TILEWINDOWS
+	    MENUITEM "Show Consoles", IDM_SHOWCONSOLES
+		MENUITEM "Random Rotation (ON/OFF)", IDM_RANDOMROTATE
+		MENUITEM "Load Listed Streams", IDM_LOAD_LISTED_STREAMS
+		MENUITEM SEPARATOR
+		MENUITEM "Hide Consoles", IDM_HIDECONSOLES
+	    MENUITEM "Kill Consoles", IDM_KILLCONSOLES		
+	END
+	POPUP "&Operations"
+    BEGIN
+     MENUITEM "&Start Server",           IDM_LISTEN	 
+	 MENUITEM "&Embrace Stream Windows",           IDM_EMBRACEPROCESS		
+	 MENUITEM "&Open Stream Manually",           IDM_JOIN	 
+	 MENUITEM SEPARATOR
+	 MENUITEM "&Update Settings",           IDM_UPDATE_SETTINGS	 
+	// MENUITEM "&Restart Configuration", IDM_RESTART //except some of the parameters, maybe 
+	 MENUITEM SEPARATOR
+	 MENUITEM "&Stop Server",           IDM_STOPLISTEN	 
+	 
+    END
+
+	POPUP "&Streams"
+	BEGIN 
+	 //MENUITEM "&",           IDM_EMBRACEPROCESS	 -- config --> don't maximize, just put out?	 
+	 MENUITEM "Refresh List",           IDM_REFRESHLIST
+	 MENUITEM SEPARATOR
+	 MENUITEM "0",           IDM_STR0
+	 MENUITEM "1",           IDM_STR1
+	 MENUITEM "2",           IDM_STR2
+	 MENUITEM "3",           IDM_STR3
+	 MENUITEM "4",           IDM_STR4
+	 MENUITEM "5",           IDM_STR5
+	 MENUITEM "6",           IDM_STR6
+	 MENUITEM "7",           IDM_STR7
+	 MENUITEM "8",           IDM_STR8
+	 MENUITEM "9",           IDM_STR9
+	 MENUITEM "10",           IDM_STR10
+	 MENUITEM "11",           IDM_STR11
+	 MENUITEM "12",           IDM_STR12
+	 MENUITEM "13",           IDM_STR13
+	 MENUITEM "14",           IDM_STR14
+	 MENUITEM "15",           IDM_STR15
+	 MENUITEM "16",           IDM_STR16
+	 MENUITEM "17",           IDM_STR17
+	 MENUITEM "18",           IDM_STR18
+	 MENUITEM "19",           IDM_STR19
+	 MENUITEM "20",           IDM_STR20
+	 MENUITEM "21",           IDM_STR21
+	 MENUITEM "22",           IDM_STR22
+	 MENUITEM "23",           IDM_STR23
+	 MENUITEM "24",           IDM_STR24
+	 MENUITEM "25",           IDM_STR25
+
+	END
+  
+	POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",           IDM_ABOUT		
+    END
+
+		
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_UDP_SERVER_WIN32 ACCELERATORS
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+/*
+IDD_REGISTER DIALOGEX 0, 0, 192, 35
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Register Fusen Receiver"
+FONT 10, "MS Shell Dlg"
+BEGIN
+     EDITTEXT IDD_SERIAL, 61, 2, 120, 12, WS_BORDER
+	 CTEXT "Serial Number", 1, 1, 2, 58, 12
+	 //CTEXT "ПАРОЛА", 2, 1, 24, 70, 12 //, SS_RIGHT
+	 DEFPUSHBUTTON   "Register",  IDOK, 61, 16, 45, 11, WS_GROUP
+	 //DEFPUSHBUTTON   "Cancel",  IDCANCEL, 112, 45, 30, 11, WS_GROUP
+
+    //ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    //LTEXT           "Glas2B-WindowsTest, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    //LTEXT           "Copyright (C) 2013",IDC_STATIC,42,26,114,8
+	//CTEXT "Потребител", 1, 1, 10, 70, 12, SS_RIGHT
+	 //CTEXT "Парола", 2, 1, 24, 70, 12, SS_RIGHT
+    //DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+*/
+
+IDD_REGISTER DIALOGEX 0, 0, 192, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Register Fusen Receiver"
+FONT 10, "MS Shell Dlg"
+BEGIN
+     EDITTEXT IDD_SERIAL, 61, 2, 120, 12, WS_BORDER
+	 CTEXT "Serial Number", 1, 3, 1, 58, 12	
+	 //DEFPUSHBUTTON   "Register",  IDOK, 61, 16, 45, 11, WS_GROUP
+	 CTEXT "Club ID      ", 2, 2, 16, 58, 12
+	 EDITTEXT IDD_CLUB_ID, 61, 16, 120, 12, WS_BORDER	 
+	 DEFPUSHBUTTON   "Register",  IDOK, 61, 32, 60, 11, WS_GROUP	 
+END
+
+/*
+ //CTEXT "ПАРОЛА", 2, 1, 24, 70, 12 //, SS_RIGHT
+ //CTEXT "ПАРОЛА", 2, 1, 24, 70, 12 //, SS_RIGHT
+ //DEFPUSHBUTTON   "Cancel",  IDCANCEL, 112, 45, 30, 11, WS_GROUP
+
+    //ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    //LTEXT           "Glas2B-WindowsTest, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    //LTEXT           "Copyright (C) 2013",IDC_STATIC,42,26,114,8
+	//CTEXT "Потребител", 1, 1, 10, 70, 12, SS_RIGHT
+	 //CTEXT "Парола", 2, 1, 24, 70, 12, SS_RIGHT
+    //DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+
+ */
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 220, 136
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Livestream Receiver"
+FONT 9, "MS Shell Dlg"
+BEGIN
+    ICON            IDI_UDP_SERVER_WIN32,IDC_STATIC,8,14,21,20
+    //LTEXT           "Livestream Receiver (Win32), Version 6/4/2013 (6-th of April 2013)",IDC_STATIC,42,14,114,9,SS_NOPREFIX
+	LTEXT           "Fusen Receiver 1.2 (Win32)",IDC_STATIC,35,14,114,9,SS_NOPREFIX	
+//	 - Developed by Todor Arnaudov : http://research.twenkid.com
+	//LTEXT           "Created by (C) Todor Arnaudov 28/3/2013\n",IDC_STATIC,42,28,140,9
+	LTEXT           "Developed by T.A. (C) 2013-2014\n",IDC_STATIC,35,28,170,9
+	LTEXT           "Licensed by Incept Development\n",IDC_STATIC,35,44,140,9
+	LTEXT           "NOTICE: This application calls and controls an LGPL FFmpeg application like a user, but it doesn't actually link to it neither statically, nor dynamically. ",IDC_STATIC,37,60,140,32
+	LTEXT           "Please, see http://fusenapp.com for details. \n",IDC_STATIC,35,96,140,9
+	//LTEXT           "Calls, encompasses and manages FFMPEG applications to process streams, however no code from FFMPEG is linked neither statically, nor dynamically.",IDC_STATIC,42,26,140,50
+    DEFPUSHBUTTON   "OK",IDOK,110,110,50,14,WS_GROUP
+	//41
+END
+
+IDD_JOIN DIALOGEX 0, 0, 210, 52
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open Video Stream"
+FONT 9, "MS Shell Dlg"
+BEGIN
+    //ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+	LTEXT           "#        Stream Address",IDC_STATIC,5,15,110,14,SS_NOPREFIX
+    //LTEXT           "Copyright (C) 2013",IDC_STATIC,42,26,114,8
+	EDITTEXT IDD_STREAMID, 5, 30, 18, 15 
+	EDITTEXT IDD_ADDRESS, 25, 30, 120, 15
+    DEFPUSHBUTTON   "Open", IDOK, 150,30,50,14,WS_GROUP
+END
+
+IDD_DLG_WEBSERVICE DIALOGEX 0, 0, 210, 400
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Manual Web Service"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    //ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+	//LTEXT           "#        Stream Address",IDC_STATIC,5,15,110,14,SS_NOPREFIX
+    //LTEXT           "Copyright (C) 2013",IDC_STATIC,42,26,114,8
+	EDITTEXT IDD_WEBSERVICE_CONTENT, 5, 30, 200, 350 
+	//EDITTEXT IDD_ADDRESS, 170, 355, 30, 20
+    DEFPUSHBUTTON   "Send", IDOK, 170,375,30,14,WS_GROUP
+END
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+1 TEXTINCLUDE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE
+BEGIN
+	"#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+   IDC_UDP_SERVER_WIN32   "UDP_SERVER_WIN32"
+   //IDS_APP_TITLE       "Livestream Receiver 1.0 - Developed by Todor Arnaudov : http://research.twenkid.com"
+   IDS_APP_TITLE       "Fusen Receiver 1.2"
+END
+
+#endif
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
