@@ -1,0 +1,245 @@
+<html>
+<body>
+<!-- style="background-image:url(fusenicon_gamma.jpg)"> -->
+</br></br>
+<!-- <font face="Equal" size=3> -->
+<div style="font-face: Arial; font-size: 12px; width: 1000px; background-image:url(kfusenicon_gamma.jpg)">
+<center>
+<div style="font-face: Arial; font-size: 14px;">
+<font face="Arial" size=4></br></br>
+<b>Fusen 1.1 - Video Stream Receiver</b>
+</br></br>
+Developed by Todor Arnaudov</br></br>
+Licensed to Incept Development - not to be resold and redistributed in source code</br>
+</br></br>
+<b>List of structs, classes and functions</b>
+</br></br>
+Prepared by <a href="http://research.twenkid.com">Todor Arnaudov</a>
+</br></br>
+Version: 8/11/2013
+</center>
+</br>
+</center>
+<span style="font-size: 24px"><i><b>General Notes</b></i></span>
+<br><br>
+The project was developed using Visual Studio 2008 Express
+<br><br>
+
+<font face="Arial">
+<span style="font-size: 24px"><i><b>Functions</b></i></span>
+
+<br><br><ul>
+<li><b>Functions in: <a href="#1">UDP_Server_Win32.cpp</a></b>
+<li><b>Functions in: <a href="#2">CaptureWindowBMP.h</a></b>
+<li><b>Functions in: <a href="#3">CudpUtils.h</a></b>
+<li><b>Functions in: <a href="#4">MDIChild.h</a></b>
+<li><b>Functions in: <a href="#5">WebService.h</a></b>
+</ul>
+<br><br>
+<span style="font-size: 24px"><i><b>Suggestions for improvements</b></i></span>
+<br><br>
+<li><b><a href="#wm_socket">Improve WM_SOCKET processing</a></b>
+<li><b><a href="#wm_socket">More elaborate UDP protocol for join/leave</a></b>
+<li><a href="#wm_socket"><b><a href="#2">Toolbar</a></b>
+<li><a href="#wm_socket"><b><a href="#3">Capture snapshots</a></b>
+<li><a href="#wm_socket"><b><a href="#3">Automatically recognize and close idle streams</a></b>
+
+</ul>
+
+</font>
+</br></br>
+<b>Struct and Class</b>
+</br></br>
+<pre>
+struct LastError
+class CWebService
+struct ConnectionData
+struct NewProcessExchangeT
+class ProcessWatchDog
+</pre>
+<hr width = 66%>
+<a name="1"></a>
+</br></br><font size=4>
+<b>Functions in: <font color="blue"> UDP_Server_Win32.cpp</font></b>
+<pre>
+int UpdateSettings()
+void SetTransparency(HWND hw, unsigned char value, int repaint)
+void SetOpaque(HWND hw, int repaint)
+void CreatePopupWindow()
+void MaximizeCurrentRestorePrevious(HWND hwnd)
+DWORD ThreadSocket(LPVOID param)
+DWORD ThreadInitialEmbrace(LPVOID param)
+void UpdateStreamMenu()
+void TileWindows()
+void OpenStream(char* url, int strID, char* ip)
+void StartUDP(const ConnectionData* conn)
+void Set(int maxProcessesAllowedIn=4, long perPeriodIn=4000)
+bool CheckForProcessRush(){ //int num)
+void Spawn()
+void Roll()
+void IncTopStream()
+void GenerateRegisterFile()
+void MarkRegistered(char* authKey = NULL)
+int IsRegistered()
+void InitConfigReadable()
+bool isContained(HWND hw, HWND* hwList, int max)
+void EmbraceStreamsSimple(HWND hwSkip = NULL )	// handle to parent window	// application-defined value)
+void UpdateStreamMenu()
+int IsInProcesses(DWORD dwID)
+int RemoveInProcesses(DWORD dwID)
+int CountActiveStreamsOnly()
+void RestoreConsoles(int op=0)
+void HideConsoles()
+void DoConsoles(int command=1)
+void InitRandomRotation()
+int CountActiveStreamsOnly()
+int CountActiveStreams(int* activeIndices)
+void NewProcessB(const char* path,  char* url, int id, char* ip)
+void InitRawInput(HWND hw)
+ATOM MyRegisterClass(HINSTANCE hInstance)
+BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
+void StartUDP(const ConnectionData* conn)
+DWORD ThreadSocket(LPVOID param)
+void FinishUDP(const ConnectionData* conn)
+void SetOpaque(HWND hw, int repaint=1)
+void SetTransparency(HWND hw, unsigned char value, int repaint)
+void RandomSelectAndShow()
+DWORD ThreadOverlay(LPVOID param)
+DWORD ThreadOpenStreams(LPVOID param)
+void MaximizeCurrentRestorePrevious(HWND hwnd)
+void RandomRotate()
+void TileWindows()
+void OpenStream(char* url, int strID, char* ip)
+DWORD ThreadInitialEmbrace(LPVOID param)
+void CloseIP(const char* ip)
+void CloseAllWindows()
+void SaveMsgLog(DWORD* msgLog, int n)
+void ProcessWmInput(WPARAM wParam, LPARAM lParam)
+int CheckAuthenticateResponse(char* sResp, char* msg)
+void ReadAuthKeyFromBin(char* chPt, int* offs, int maxSymbols, char* result)
+int UpdateSettings()
+int Authenticate(char* activationKey)
+BOOL IsInside(const RECT* rect, const POINT point)
+void ProcessWmInput(WPARAM wParam, LPARAM lParam)
+Found: 59
+</pre>
+
+<hr width = 66%>
+<a name="2"></a>
+</br></br><font size=4>
+<b>Functions in: <font color="blue"> CaptureWindowBMP.h</font></b>
+<pre>
+void CreateBorderlessWindow(HWND hParent, HINSTANCE hInstance, LPRECT lpRect)(2395, 2472)
+
+void OnPaint(HWND hwSrc, HWND hwnd)(3140, 3175)
+
+void CaptureScreen(HWND hParent, HWND hwSrc) (5302, 5385)
+
+Found: 3
+</pre>
+
+
+<hr width = 66%>
+<a name="3"></a>
+</br></br><font size=4>
+<b>Functions in: <font color="blue"> CudpUtils.h</font></b>
+<pre>
+void SetPort(int portIn=PORT_DEFAULT)(1921, 1958)
+
+void SetHWND(HWND hw)(2123, 2144)
+
+void PostFinish()(2205, 2222)
+
+int StartWS()(2260, 2273)
+
+int CreateSocket()(2591, 2609)
+
+void SetupAddress()(2869, 2888)
+
+void ListenSocket()(3138, 3157)
+
+void CloseConnection()(4073, 4095)
+
+void SetPortUDP(int portIn=PORT_DEFAULT)(5050, 5090)
+
+int join_source_group(int sd, u_int32 grpaddr, u_int32 srcaddr, u_int32 iaddr)(5246, 5324)
+
+int leave_source_group(int sd, u_int32 grpaddr, u_int32 srcaddr, u_int32 iaddr)(5702, 5781)
+
+void SetHWND(HWND hw)(6206, 6227)
+
+void PostFinish()(6288, 6305)
+
+int StartWS()(6343, 6356)
+
+int CreateSocket()(6818, 6836)
+
+void SetupAddress()(7317, 7336)
+
+void ListenSocket()(9953, 9972)
+
+void CloseConnection()(10569, 10591)
+
+Found: 18
+</pre>
+
+
+<hr width = 66%>
+<a name="4"></a>
+</br></br><font size=4>
+<b>Functions in: <font color="blue"> MDIChild.h</font></b>
+<pre>
+BOOL SetUpMDIChildWindowClass(HINSTANCE hInstance, LPCSTR childClassName )(294, 368)
+
+Found: 1
+</pre>
+
+<hr width = 66%>
+<a name="5"></a>
+</br></br><font size=4>
+<b>Functions in: <font color="blue"> WebService.h</font></b>
+<pre>
+int postAuthorize(char* host, char* action, char* authNumber, int clubID,
+                  DWORD* lpOutBuffer, LastError* er) (1212, 1347)
+
+int postUpdateSettingsAuthKey(char* host,char* action,int iClubID, char* authNumber,
+        char* localIP, int port, DWORD* lpOutBuffer, LastError* er=NULL)(5152, 5301)
+
+Found: 2
+
+</pre>
+</br></br>
+</br></br>
+<span style="font-size: 26px"><i><b>Suggestions for future versions</b></i></span>
+</br></br></br>
+<ul>
+<li>
+<a name="wm_socket">
+<b>Processing WM_SOCKET</b>
+</br></br>
+Processing this message completely in the main WndProc loop (including also a Sleep() period) is generally not a good idea,
+because it blocks the main callback cycle during the processing. It was a compromise for a quick solution, not the best one.
+</br></br>
+In a future version if I have some time to experiment, I'd implement something liek the following:
+</br></br>
+1. The WndProc callback function will just receive the messages and push them into a queue.</br></br>
+2. There will be a timer, which will call another callback function, say each 10 ms or so, or there will be a thread with an endless loop and sleep periods (that could be adjusted adaptively depending on the load), which will consume data from the queue. 
+</br></br>
+EnterCriticalSection() or other concurrency instruments might be necessary.
+</br></br>
+<!--
+<li><a href="#wm_socket"><b>Functions in: <a href="#3">Capture snapshots</a></b>
+<li><a href="#wm_socket"><b>Functions in: <a href="#3">Automatically recognize and close idle streams</a></b>
+-->
+<a name="toolbar">
+<li><b>Toolbar</b>
+</br>
+
+<li><b>Capture snapshots</b>
+
+<li><b>Automatically recognize and close idle streams</b>
+</br></br>
+</br></br>
+</div>
+</body>
+</html>

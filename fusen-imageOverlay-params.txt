@@ -1,0 +1,10 @@
+enable_image_overlay	1
+image_overlay_path	imageOverlay.png
+image_overlay_x		-15
+image_overlay_y		64
+#	#
+
+Positive coordinate indicates an offset from the right (or the top) of the screen
+Negative coordinate indicates an offset from the left (or the bottom) of the screen
+
+
