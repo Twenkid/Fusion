@@ -2,7 +2,8 @@
 // Author/Contributor: Todor Arnaudov
 // Derived/modified from the following example:
 // http://www.winprog.org/tutorial/app_four.html
-//
+// Modified in 2013
+// MIT License 2018
 
 #include <windows.h>
 
