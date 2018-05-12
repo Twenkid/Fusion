@@ -75,8 +75,9 @@ WS_EX_LAYERED
  The window is a layered window. This style cannot be used if the window has a class style of either CS_OWNDC or CS_CLASSDC.
 Windows 8:  The WS_EX_LAYERED style is supported for top-level windows and child windows. Previous Windows versions support WS_EX_LAYERED only for top-level windows.
 */
-
-//in Win7 not supported for child windows! WS_CHILD  //WS_CHILD
+//In Win7 not supported for child windows! WS_CHILD  //WS_CHILD
+//In Win10 use for style:  SS_NOTIFY | WS_VISIBLE | SS_LEFT | WS_POPUP | WS_BORDER - with or without WS_EX_LAYERED. 
+// Well, without WS_BORDER it failed to appear at least in my environment in another application. It's not "borderless", but is without system decorations.
 void CreateBorderlessWindow(HWND hParent, HINSTANCE hInstance, LPRECT lpRect){ //10-5-2013 OK
 	if (!IsWindow(hwPopupMain)){
     hwPopupMain = CreateWindowExA(0, "STATIC", " ", 
